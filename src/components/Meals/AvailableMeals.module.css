@@ -1,0 +1,16 @@
+.outerMealBox{
+    width: 70% ;
+    height:80%;
+    padding-top: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.innerMealBox{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
