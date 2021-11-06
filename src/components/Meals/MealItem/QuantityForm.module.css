@@ -5,5 +5,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    position: relative;
+    left: 50%;
+}
+.btn{
+    width: 60%;
+    height: 30px;
+    background-color: maroon;
+    color: white;
+    margin-left: 40%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
 }

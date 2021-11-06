@@ -1,20 +1,21 @@
 import Card from "../../UI/Card"
 import QuantityForm from "./QuantityForm";
 import classes from "./MealItem.module.css";
+import Tertiary from "../../Headings/Tertiary";
 
 const MealItem = props => {
     return (
         <Card styling={classes["mealItem"]}>
             <li>
                 <div className={classes["subMealItem"]}>
-                    <div>
+                    <Tertiary styling={classes["mealName"]}>
                         {props.title}
-                    </div>
+                    </Tertiary>
                     <div>
                         {props.desc}
                     </div>
                     <div>
-                        {props.price}
+                        ${props.price}
                     </div>
                 </div>
                 <div className={classes["subMealItem"]}>

@@ -30,7 +30,7 @@ const AvailableMeals = props => {
         }
     ];
     return (
-        <Card className={classes["outerMealBox"]}>
+        <Card styling={classes["outerMealBox"]}>
             <ul className={classes["innerMealBox"]}>
                 {
                     Meals.map(meal => {

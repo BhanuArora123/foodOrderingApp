@@ -12,7 +12,7 @@ const QuantityForm = props => {
                 label:"Amount :"
             }}
             />
-            <button>
+            <button className={classes["btn"]}>
                 +Add
             </button>
         </form>

@@ -8,8 +8,9 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 100px;
+    top: -110px;
     left: 25%;
+    padding: 20px;
 }
 .para{
     width: 100%;
@@ -17,10 +18,12 @@
     display: flex;
     text-align: center;
     align-items: center;
+    font-size: 12px;
 }
 .head{
     width: 100%;
     background-color: black;
     color: white;
     height: 50px;
+    text-align: center;
 }
