@@ -1,9 +1,11 @@
 import ModalBox from "./ModalBox"
 import BackDrop from "./BackDrop";
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
+import ShowContext from "../../store/show-context";
 
 const Modal = props => {
-    if(!props.show){
+    const showCtx = useContext(ShowContext);
+    if(!showCtx.show){
         return <div></div>
     }
     return (
