@@ -1,0 +1,12 @@
+.modalBox{
+    width: 60%;
+    position: fixed;
+    top: 200px;
+    left: 20%;
+    z-index: 10;
+    overflow: hidden;
+}
+.hide{
+    width: 0%;
+    height: 0%;
+}
