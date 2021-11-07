@@ -8,7 +8,7 @@ import Meals from "../Meals/Meals";
 const Headers = props => {
     return (
         <Fragment>
-            <NavBar></NavBar>
+                <NavBar></NavBar>
             <ImageContextProvider value = {{
                     src:foodGallery,
                     alt:"food Gallery"

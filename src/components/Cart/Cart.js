@@ -10,21 +10,26 @@ const Cart = props => {
     let totalPrice = 0;
     const CartCtx = useContext(CartContext);
     return (
-        <Card styling={classes["cart"]}>
+        <Card styling={ classes["cart"] }>
             {
-                CartCtx.map((cartItem) => {
-                    totalPrice += cartItem.price * cartItem.qty;
-                    return (
-                        <CartItem 
-                        name={cartItem.name}
-                        price={cartItem.price}
-                        key={cartItem.key}
-                        qty={cartItem.qty}
-                        />
-                    )
+                CartCtx.cart.map((cartItem) => {
+                    if (cartItem) {
+                        totalPrice += cartItem.price * cartItem.qty;
+                        return (
+                            <CartItem
+                                name={ cartItem.title }
+                                price={ cartItem.price }
+                                key={ cartItem.key }
+                                qty={ cartItem.qty }
+                            />
+                        )
+                    }
+                    else{
+                        return (<></>);
+                    }
                 })
             }
-            <Total totalPrice={totalPrice}></Total>
+            <Total totalPrice={ totalPrice }></Total>
         </Card>
     )
 }

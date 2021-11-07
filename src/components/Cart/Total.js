@@ -1,8 +1,13 @@
-import { Fragment } from "react/cjs/react.production.min"
+import { useContext } from "react";
+import ShowContext from "../../store/show-context";
 import Tertiary from "../Headings/Tertiary";
 import classes from "./Total.module.css";
 
 const Total = props => {
+    const showCtx = useContext(ShowContext);
+    const closeModalHandler = () => {
+        showCtx.changeShow(false);
+    }
     return (
         <div className={classes["totalAmount"]}>
             <div className={classes["totalPrice"]}>
@@ -13,7 +18,7 @@ const Total = props => {
             </div>
             <div className={classes["totalPrice"]}>
                 <div className={classes["close"]}>
-                    <button >Close</button>
+                    <button onClick={closeModalHandler}>Close</button>
                 </div>
                 <div className={classes["order"]}>
                     <button>Order</button>

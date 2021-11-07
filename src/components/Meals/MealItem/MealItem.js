@@ -19,7 +19,7 @@ const MealItem = props => {
                     </div>
                 </div>
                 <div className={classes["subMealItem"]}>
-                    <QuantityForm key={props.key}></QuantityForm> 
+                    <QuantityForm {...props} id={props.id}></QuantityForm> 
                 </div>
             </li>
         </Card>
