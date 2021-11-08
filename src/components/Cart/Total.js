@@ -8,6 +8,9 @@ const Total = props => {
     const closeModalHandler = () => {
         showCtx.changeShow(false);
     }
+    const orderModalHandler = () => {
+        console.log("Ordering...");
+    }
     return (
         <div className={classes["totalAmount"]}>
             <div className={classes["totalPrice"]}>
@@ -21,7 +24,7 @@ const Total = props => {
                     <button onClick={closeModalHandler}>Close</button>
                 </div>
                 <div className={classes["order"]}>
-                    <button>Order</button>
+                    <button onClick={orderModalHandler}>Order</button>
                 </div>
             </div>
         </div>

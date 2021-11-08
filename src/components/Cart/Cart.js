@@ -10,7 +10,7 @@ const Cart = props => {
     let totalPrice = 0;
     const CartCtx = useContext(CartContext);
     return (
-        <Card styling={ classes["cart"] }>
+        <Card styling={ classes["cart"] } value={CartCtx.cart}>
             {
                 CartCtx.cart.map((cartItem) => {
                     if (cartItem) {
@@ -21,6 +21,7 @@ const Cart = props => {
                                 price={ cartItem.price }
                                 key={ cartItem.key }
                                 qty={ cartItem.qty }
+                                id={cartItem.key}
                             />
                         )
                     }
