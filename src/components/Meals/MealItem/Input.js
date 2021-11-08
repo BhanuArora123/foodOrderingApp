@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import classes from "./Input.module.css";
 
 
 const Input = props => {
+    const [amount,setAmount] = useState(NaN);
+    const changeHandler = (event) => {
+        const val = event.target.value;
+        setAmount(val);
+    }
+    useEffect(() => {
+        if(props.clicked === true){
+            props.addToCartHandler(amount);
+            setAmount(NaN);
+        }
+    },[props.clicked])
+    console.log("run");
     return (
         <div className={classes["input-field"]}>
             <label 
@@ -10,6 +23,9 @@ const Input = props => {
             }</label>
             <input 
                 {...props.input}
+                value={amount}
+                onChange={changeHandler}
+                required
             />
         </div>
     ) 

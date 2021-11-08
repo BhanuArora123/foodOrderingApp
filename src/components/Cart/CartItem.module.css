@@ -18,9 +18,27 @@
     flex-direction: column;
 }
 .cartItem-subpart{
-    width: 100;
+    width: 100%;
     height: 50%;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+}
+
+.horizontal-part{
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.icon{
+    margin:10px;
+    color: white;
+    cursor: pointer;
+    background-color: brown;
+    border: 1px solid brown;
+}
+
+.icon:hover{
+    color: brown;
+    background-color: white;
+    border: none;
 }

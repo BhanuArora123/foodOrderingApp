@@ -38,7 +38,8 @@ const AvailableMeals = props => {
                             title={meal.title}
                             key={meal.key}
                             desc={meal.desc}
-                            price={meal.price} />
+                            price={meal.price}
+                            id={meal.key} />
                     })
                 }
             </ul>
