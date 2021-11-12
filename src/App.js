@@ -10,7 +10,7 @@ const App = () => {
       <TotalProdProvider>
         <ShowContextProvider>
           <Headers></Headers>
-            <Modal></Modal>
+          <Modal></Modal>
         </ShowContextProvider>
       </TotalProdProvider>
     </CartContextProvider>
