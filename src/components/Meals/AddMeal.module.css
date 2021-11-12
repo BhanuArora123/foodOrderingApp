@@ -1,0 +1,51 @@
+.addMealForm{
+    width:50%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: white;
+}
+.input-wrapper{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.inputField{
+    width: 70%;
+    height: 60%;
+    display: flex;
+    outline: none;
+    border: none;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+.labelField{
+    width: 20%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid brown;
+    background-color: white;
+    color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn:hover {
+    background-color: brown;
+    color: white;
+}

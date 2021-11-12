@@ -3,7 +3,7 @@ import classes from "./Input.module.css";
 
 
 const Input = props => {
-    const [amount,setAmount] = useState(0);
+    const [amount,setAmount] = useState("");
     const changeHandler = (event) => {
         const val = event.target.value;
         setAmount(val);
@@ -11,6 +11,7 @@ const Input = props => {
     useEffect(() => {
         if(props.clicked === true){
             props.addToCartHandler(amount);
+            setAmount("");
         }
     },[props.clicked])
     console.log("run");
@@ -22,7 +23,9 @@ const Input = props => {
             }</label>
             <input 
                 {...props.input}
+                value={amount}
                 onChange={changeHandler}
+                required
             />
         </div>
     ) 

@@ -21,7 +21,7 @@ const QuantityForm = props => {
                 title:props.title,
                 desc:props.desc,
                 price:props.price,
-                qty:parseInt(qty),
+                qty:parseInt(qty) + (current[props.id - 1]? current[props.id - 1].qty : 0),
                 key:props.id
             };
             console.log(current);
@@ -32,7 +32,7 @@ const QuantityForm = props => {
             console.log(current);
             return current;
         } )
-        // setClick(false);
+        setClick(false);
     }
     return (
         <form className={classes["quantityForm"]} onSubmit={clickHandler}>

@@ -4,6 +4,7 @@ import BgImage from "./BackImage/BgImage";
 import NavBar from "./Nav/NavBar";
 import foodGallery from "../../images/foodGallery.webp";
 import Meals from "../Meals/Meals";
+import AddFood from "./AddFood";
 
 const Headers = props => {
     return (
@@ -16,6 +17,7 @@ const Headers = props => {
                 <BgImage></BgImage>
             </ImageContextProvider>
             <Meals></Meals>
+            <AddFood></AddFood>
         </Fragment>
     )
 };
