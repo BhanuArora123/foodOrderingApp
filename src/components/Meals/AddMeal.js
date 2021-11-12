@@ -17,7 +17,7 @@ const AddMeal = (props) => {
         setPrice(event.target.value);
     }
     const submitHandler = () => {
-
+        
     }
     return (
         <form className={classes["addMealForm"]} onSubmit={submitHandler}>
