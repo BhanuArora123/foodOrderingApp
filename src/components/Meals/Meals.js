@@ -5,7 +5,7 @@ import classes from "./Meals.module.css";
 const Meals = props => {
     return (
         <section className={classes["meals"]}>
-            <AvailableMeals />
+            <AvailableMeals setMeal={props.setMeal} setError={props.setError} setTotal={props.setTotal} />
             <MealSummary />
         </section>
     )

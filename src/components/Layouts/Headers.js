@@ -5,8 +5,12 @@ import NavBar from "./Nav/NavBar";
 import foodGallery from "../../images/foodGallery.webp";
 import Meals from "../Meals/Meals";
 import AddFood from "./AddFood";
+import { useState } from "react/cjs/react.development";
 
 const Headers = props => {
+    const [errorFun, setError] = useState(() => {})
+    const [mealFun,setMeal] = useState(() => {});
+    const [totalItems , setTotal] = useState(0);
     return (
         <Fragment>
                 <NavBar></NavBar>
@@ -16,8 +20,8 @@ const Headers = props => {
                 }}>
                 <BgImage></BgImage>
             </ImageContextProvider>
-            <Meals></Meals>
-            <AddFood></AddFood>
+            <Meals setError={setError} setMeal={setMeal} setTotal={setTotal}></Meals>
+            <AddFood setError={errorFun} setMeal={mealFun} total={totalItems}></AddFood>
         </Fragment>
     )
 };
