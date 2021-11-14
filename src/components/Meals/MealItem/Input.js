@@ -3,7 +3,7 @@ import classes from "./Input.module.css";
 
 
 const Input = props => {
-    const [amount,setAmount] = useState(NaN);
+    const [amount,setAmount] = useState("");
     const changeHandler = (event) => {
         const val = event.target.value;
         setAmount(val);
@@ -11,7 +11,7 @@ const Input = props => {
     useEffect(() => {
         if(props.clicked === true){
             props.addToCartHandler(amount);
-            setAmount(NaN);
+            setAmount("");
         }
     },[props.clicked])
     console.log("run");
