@@ -1,6 +1,6 @@
 import axios from "axios";
-const addMeal = async (mealData,setCart,setError) => {
-    console.log(mealData);
+export const addMeal = async (mealData,setCart,setError,setclick) => {
+    console.log(setError);
     let response = await axios({
         method: "post",
         url:"http://localhost:8080/addFoodItem",
@@ -10,7 +10,7 @@ const addMeal = async (mealData,setCart,setError) => {
     })
     if(response.status !== 200 && response.status !== 201){
         console.log(response.data.message);
-        setError(true);
+        return setError(true);
     }
     setError(false);
     console.log(setCart);
@@ -19,5 +19,5 @@ const addMeal = async (mealData,setCart,setError) => {
         current.push(mealData);
         return current;
     })
+    setclick(false);
 }
-export default addMeal;

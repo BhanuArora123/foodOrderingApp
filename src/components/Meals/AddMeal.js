@@ -18,12 +18,12 @@ const AddMeal = (props) => {
     }
     const submitHandler = (event) => {
         event.preventDefault();
-        props.addMeal({
+        props.setMealItem({
             title:title,
             desc:desc,
-            price:price,
-            key:props.total
+            price:price
         })
+        props.setclick(true);
     }
     return (
         <form className={classes["addMealForm"]} onSubmit={submitHandler}>

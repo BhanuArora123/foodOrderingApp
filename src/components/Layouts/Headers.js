@@ -6,11 +6,11 @@ import foodGallery from "../../images/foodGallery.webp";
 import Meals from "../Meals/Meals";
 import AddFood from "./AddFood";
 import { useState } from "react/cjs/react.development";
+import { addMeal } from "../Meals/Requests/AddMeal";
 
 const Headers = props => {
-    const [errorFun, setError] = useState(() => {})
-    const [mealFun,setMeal] = useState(() => {});
-    const [totalItems , setTotal] = useState(0);
+    const [mealItem , setMealItem] = useState();
+    const [isClicked , setclick] = useState(false);
     return (
         <Fragment>
                 <NavBar></NavBar>
@@ -20,8 +20,8 @@ const Headers = props => {
                 }}>
                 <BgImage></BgImage>
             </ImageContextProvider>
-            <Meals setError={setError} setMeal={setMeal} setTotal={setTotal}></Meals>
-            <AddFood setError={errorFun} setMeal={mealFun} total={totalItems}></AddFood>
+            <Meals isClicked={isClicked} mealItem={mealItem} setclick={setclick} addMeal={addMeal}></Meals>
+            <AddFood setclick={setclick} setMealItem={setMealItem} ></AddFood>
         </Fragment>
     )
 };
