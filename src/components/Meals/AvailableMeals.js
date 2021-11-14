@@ -8,11 +8,13 @@ const AvailableMeals = props => {
     const [isLoading, setLoading] = useState(true);
     const [error,setError] = useState(false);
 
+    const { isClicked } = props;
     useEffect(() => {
-        props.setError(setError);
-        props.setMeal(setMeals);
-        props.setTotal(Meals.length);
-    },[])
+        if(isClicked){
+            props.mealItem.key = Meals.length + 1;
+            props.addMeal(props.mealItem,setMeals,setError,props.setclick);
+        }
+    },[isClicked])
     // fetch from remote server
     const getFoodItem = useCallback(async function getFoodItem() {
         try {

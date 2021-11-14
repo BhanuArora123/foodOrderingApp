@@ -1,6 +1,5 @@
 .outerMealBox{
     width: 70% ;
-    height:80%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
